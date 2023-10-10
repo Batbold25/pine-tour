@@ -1,0 +1,134 @@
+:root {
+    --header-height: 58px;
+    --container-max-width: 1440px;
+    --section-max-width: 1198px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #303030;
+}
+
+header {
+    background-color: black;
+    height: var(--header-height);
+    padding: 8px 0;
+}
+
+main {
+    max-width: var(--container-max-width);
+    margin: auto;
+}
+
+h1 {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h5 {
+    color: #1AC74A;
+    font-family: Nico Moji;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+section {
+    max-width: var(--section-max-width);
+    margin: auto;
+}
+
+section:first-child {
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section:nth-child(2) {
+    display: flex;
+    gap: 200px;
+    justify-content: flex-start;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+section:nth-child(2)>div {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+section:nth-child(2) article h2,
+h5 {
+    margin: 0;
+}
+
+.images-container {
+    display: flex;
+    gap: 66px;
+}
+
+#tour-logo {
+    display: block;
+    margin: auto;
+}
+
+.card {
+    display: flex;
+    padding: 20px;
+    border: solid 1px black;
+    border-radius: 8px;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card>div>p:last-child {
+    font-family: none;
+    color: #777 !important;
+    text-align: end
+}
+
+.card:hover {
+    color: #D9D9D9;
+    background-color: black;
+}
+
+#day1:hover #square {
+    opacity: 1;
+}
+
+#day2:hover #monastery {
+    opacity: 1;
+}
+
+#square,
+#monastery {
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
